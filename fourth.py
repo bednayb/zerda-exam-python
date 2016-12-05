@@ -40,10 +40,8 @@ class Rocket():
 
     def refill(self):
         if self.type_of_rocket == "falcon1":
-            if self.fuel_level >= 5:
+            if self.fuel_level < 5:
                 return 5
-            else:
-                return 5 - self.fuel_level
 
         elif self.type_of_rocket == "falcon9":
             if self.fuel_level >= 20:
