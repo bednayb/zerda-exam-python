@@ -8,8 +8,7 @@
 def count_a_in_text_file(file_name, string):
     if isinstance(string, str):
         with open(file_name, "a") as myfile:
-            for i in range(9):
-                myfile.write(string)
+            myfile.write(string*10)
         return True
     else:
         return False

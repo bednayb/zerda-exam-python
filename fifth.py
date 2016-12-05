@@ -54,7 +54,7 @@ class SpaceX(Rocket):
         pass
 
     def getStats(self):
-        return "rockets:", self.rockets, "fuel:", self.fuel_level,"launches:", self.launches
+        return "rockets:", self.rockets, "fuel:", self.fuel_level,"launches:", self.launches, self.stored_fuel
 
 
 space_x = SpaceX(100)
