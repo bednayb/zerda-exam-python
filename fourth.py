@@ -53,10 +53,6 @@ class Rocket():
         return "name:", self.type_of_rocket, "fuel:", self.fuel_level,"launches:", self.launches
 
 
-
-
-
-
 falcon1 = Rocket('falcon1')
 returned_falcon9 = Rocket('falcon9', 11, 1)
 
