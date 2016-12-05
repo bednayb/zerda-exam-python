@@ -56,7 +56,6 @@ class SpaceX(Rocket):
     def getStats(self):
         return "rockets:", self.rockets, "fuel:", self.fuel_level,"launches:", self.launches, self.stored_fuel
 
-
 space_x = SpaceX(100)
 falcon1 = Rocket('falcon1', 0, 0)
 falcon9 = Rocket('falcon9', 0, 0)
