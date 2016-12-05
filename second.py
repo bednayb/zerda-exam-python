@@ -6,9 +6,12 @@
 # the function should write "appleappleapple" to the file "tree.txt", and return True.
 
 def count_a_in_text_file(file_name, string):
-    with open(file_name, "a") as myfile:
-        for i in range(9):
-            myfile.write(string)
-    return True
+    if isinstance(string, str):
+        with open(file_name, "a") as myfile:
+            for i in range(9):
+                myfile.write(string)
+        return True
+    else:
+        return False
 
 count_a_in_text_file("text_for_second.txt","apple")
