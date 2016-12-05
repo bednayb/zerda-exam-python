@@ -22,11 +22,41 @@
 
 # The following code should work with the class:
 
-falcon1 = Rocket('falcon1')
-returned_falcon9 = Rocket('falcon9', 11, 1)
+class Rocket():
+    def __init__(self, type_of_rocket):
+        self.type_of_rocket = type_of_rocket
+        self.fuel_level = 0
+        self.launches = 0
 
-falcon1.refill() # 5
-falcon1.launch()
+    def launch(self):
+        if self.type_of_rocket == "falcon1":
+            if self.fuel_level >= 1:
+                self.launches += 1
+                self.fuel_level -= 1
+        elif self.type_of_rocket == "falcon9":
+            if self.fuel_level >= 9:
+                self.launches += 1
+                self.fuel_level -= 9
 
-print(falcon1.getStats()) # name: falcon1, fuel: 4, launches: 1
-print(returned_falcon9.getStats()) # name: falcon9, fuel: 11, launches: 1
+
+
+
+    def refill(self):
+        pass
+
+    def getStats(self):
+        pass
+
+
+
+
+
+
+    falcon1 = Rocket('falcon1')
+    returned_falcon9 = Rocket('falcon9', 11, 1)
+
+    falcon1.refill() # 5
+    falcon1.launch()
+
+    print(falcon1.getStats()) # name: falcon1, fuel: 4, launches: 1
+    print(returned_falcon9.getStats()) # name: falcon9, fuel: 11, launches: 1
