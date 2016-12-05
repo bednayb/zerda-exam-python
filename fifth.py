@@ -30,10 +30,12 @@ class SpaceX(Rocket):
     def __init__(self, stored_fuel,rockets = []):
         self.stored_fuel = stored_fuel
         self.rockets = rockets
+        self.rockets_number = 0
 
     ### NOT CLEAR THE EXERCISE YET ###
     def addRocket(self,type_of_rocket):
         self.rockets.append(type_of_rocket)
+        self.rockets_number +=1
 
     ### NOT READY ###
     def refill_all(self):
@@ -54,7 +56,10 @@ class SpaceX(Rocket):
         pass
 
     def getStats(self):
-        return "rockets:", self.rockets, "fuel:", self.fuel_level,"launches:", self.launches, self.stored_fuel
+        return "rockets:",self.rockets_number,"fuel:",self.stored_fuel,"launches:"
+
+
+
 
 space_x = SpaceX(100)
 falcon1 = Rocket('falcon1', 0, 0)
