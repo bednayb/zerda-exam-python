@@ -5,18 +5,10 @@
 # Example: when called with the following two parameters: "tree.txt", "apple",
 # the function should write "appleappleapple" to the file "tree.txt", and return True.
 
-def count_a_in_text_file(file_name,string):
-    try:
-        ### OPEN THE FILE ###
-        f = open(file_name)
-        file_lines = f.readlines()
-        number_of_a = 0
-        ### COUNT "A" ###
-        for word in range(len(file_lines)):
-            for char in file_lines[word]:
-                if char == "a":
-                    number_of_a +=1
-        print(number_of_a)
-    ### NOT EXIST FILE ###
-    except FileNotFoundError:
-        return 0
+def count_a_in_text_file(file_name, string):
+    with open(file_name, "a") as myfile:
+        for i in range(9):
+            myfile.write(string)
+    return True
+
+count_a_in_text_file("text_for_second.txt","apple")
