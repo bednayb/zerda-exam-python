@@ -31,7 +31,7 @@ class SpaceX(Rocket):
         self.stored_fuel = stored_fuel
         self.rockets = rockets
         self.rockets_number = 0
-
+        self.amount = 0
     ### NOT CLEAR THE EXERCISE YET ###
     def addRocket(self,type_of_rocket):
         self.rockets.append(type_of_rocket)
@@ -53,7 +53,7 @@ class SpaceX(Rocket):
                     self.rockets[i].self.fuel_level == 9
 
     def buy_fuel(self,amount):
-        pass
+        self.amount += amount
 
     def getStats(self):
         return "rockets:",self.rockets_number,"fuel:",self.stored_fuel,"launches:"
