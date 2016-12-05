@@ -27,8 +27,16 @@ The application is accepted if:
 ### Explain the algorithm seen in `third.py`. Use a flowchart, structogram or pseudo code. [2p]
 #### Your answer:
 
+
 ### How can you create a graphical user interface and draw a rectangle on it in python? What are the tools needed for it? [2p]
 #### Your answer:
 
+First of all we need to import the Tkinter into our file. It's a Graphical User Interface) package. After that we need to call it and make a canvas "screen" where we can add the screen height, width,background etc. Last we need to call a create_rectangle in the canvas like that:
+canvas.create_rectangle(i, j, i+100, j+100, fill="black")
+
+The i,j i+100 j+100 is the four cordinate of the rectangle.
+
 ### What does V stand for in MVC? [2p]
 #### Your answer:
+
+The MVC is a software design pattern. it has 3 big part M-model, V-view, C-controller. In the View you can manage the output, so what can see the user on his screen.
